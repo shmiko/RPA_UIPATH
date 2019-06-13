@@ -1,15 +1,15 @@
 {
-  "name": "2.1 Intro",
-  "description": "Blank Process",
-  "main": "Assign+Message.xaml",
+  "name": "UiPath_REFrameWork",
+  "description": "UiPath_REFrameWork Template",
+  "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.4.6863.30657]",
-    "UiPath.Mail.Activities": "[1.2.6863.29868]",
-    "UiPath.System.Activities": "[18.3.6864.20561]",
-    "UiPath.UIAutomation.Activities": "[18.3.6877.28298]"
+    "UiPath.Excel.Activities": "[2.6.0]",
+    "UiPath.Mail.Activities": "[1.5.0]",
+    "UiPath.System.Activities": "[18.3.6897.22524]",
+    "UiPath.UIAutomation.Activities": "[18.3.6897.22543]"
   },
   "schemaVersion": "3.2",
-  "studioVersion": "18.3.1.0",
+  "studioVersion": "17.1",
   "projectVersion": "1.0.0.0",
   "runtimeOptions": {
     "autoDispose": false,
