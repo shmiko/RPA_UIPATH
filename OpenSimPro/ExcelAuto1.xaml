@@ -1,0 +1,221 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ExcelAuto1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="inputDataTable" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="outputDataTable" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="countExcel" Type="InOutArgument(x:Int32)" />
+    <x:Property Name="varDataTable" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="strExcelProdDetSheet" Type="InArgument(x:String)" />
+    <x:Property Name="strProducedQuoteFillRange" Type="InArgument(x:String)" />
+    <x:Property Name="strExcelPath" Type="InArgument(x:String)" />
+    <x:Property Name="strExcelQuoteSheet" Type="InArgument(x:String)" />
+    <x:Property Name="outputDataTable2" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="intCountExcel" Type="InOutArgument(x:Int32)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>476,2722</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Credentials.Activities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Exchange.Activities</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.POP3.Activities</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Script.Activities</x:String>
+      <x:String>UiPath.Script.Activities.PowerShell</x:String>
+      <x:String>UiPath.Script.Activities.AutoHotKey</x:String>
+      <x:String>UiPath.Script.AutoHotKey</x:String>
+      <x:String>UiPath.Script.Powershell</x:String>
+      <x:String>UiPath.Orchestrator.Client</x:String>
+      <x:String>UiPath.Orchestrator.Client.Models</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Credentials.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Script.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Script</AssemblyReference>
+      <AssemblyReference>UiPath.OrchestratorClient</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ExcelAuto" sap:VirtualizedContainerService.HintSize="436,2602" sap2010:WorkflowViewState.IdRef="Sequence_49">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="B1" Name="strExcelSheetCell" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\Paul\Downloads\Quote_Activity_Report_reportTable_CSV.csv" Name="strCSVFile" />
+      <Variable x:TypeArguments="x:String" Default="[DateTime.Now.ToString(“MMM”, System.Globalization.CultureInfo.CreateSpecificCulture(“en”)).ToString]" Name="dateThisMonth" />
+      <Variable x:TypeArguments="x:String" Default="[&quot; :&quot; +“A+(countExcel).ToString&quot;]" Name="strExcelAutoFillRange" />
+      <Variable x:TypeArguments="x:Int32" Default="[varDataTable.Rows.COUNT + intCountExcel]" Name="FillRangeLastRow" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\Paul\Documents\FY2019 SALES.xlsx" Name="strExcelPath" />
+      <Variable x:TypeArguments="x:Int32" Name="countExcel" />
+      <Variable x:TypeArguments="sd:DataTable" Name="varDataTable" />
+      <Variable x:TypeArguments="x:String" Default="PRODUCED DETAILS" Name="strExcelProdDetSheet" />
+      <Variable x:TypeArguments="x:String" Default="[&quot;A&quot;+varDataTable.Rows.COUNT.ToString + &quot;:F&quot; + intCountExcel.ToString]" Name="strProducedQuoteFillRange" />
+      <Variable x:TypeArguments="x:Int32" Name="intCountExcel" />
+      <Variable x:TypeArguments="x:String" Default="QUOTE_DETAILS_RAW_DATA" Name="strExcelQuoteSheet" />
+      <Variable x:TypeArguments="sd:DataTable" Name="outputQuoteDataTable2" />
+      <Variable x:TypeArguments="sd:DataTable" Name="inputDataTable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="&quot;ReadCSV" sap:VirtualizedContainerService.HintSize="414,282" sap2010:WorkflowViewState.IdRef="Sequence_24">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[inputDataTable]" Delimitator="Comma" DisplayName="Read CSV" FilePath="C:\Users\Paul\Downloads\Quote_Activity_Report_reportTable_CSV.csv" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="ReadCsvFile_4" IncludeColumnNames="False" />
+      <ui:FilterDataTable DataTable="[inputDataTable]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[outputQuoteDataTable2]" SelectColumnsMode="Keep">
+        <ui:FilterDataTable.Filters>
+          <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+            <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Selected"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+          </scg:List>
+        </ui:FilterDataTable.Filters>
+        <ui:FilterDataTable.SelectColumns>
+          <scg:List x:TypeArguments="InArgument" Capacity="8">
+            <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
+            <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+            <InArgument x:TypeArguments="x:Int32">[3]</InArgument>
+            <InArgument x:TypeArguments="x:Int32">[8]</InArgument>
+            <InArgument x:TypeArguments="x:Int32">[14]</InArgument>
+          </scg:List>
+        </ui:FilterDataTable.SelectColumns>
+      </ui:FilterDataTable>
+    </Sequence>
+    <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="414,2156" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" WorkbookPath="C:\Users\Paul\Documents\FY2019 SALES.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="358,2047" sap2010:WorkflowViewState.IdRef="Sequence_39">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,509" sap2010:WorkflowViewState.IdRef="Sequence_38">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="variable1" />
+                <Variable x:TypeArguments="x:String" Name="variable2" />
+                <Variable x:TypeArguments="sd:DataTable" Name="outputQuoteDataTable" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ExcelWriteRange AddHeaders="False" DataTable="[outputQuoteDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_3" SheetName="QUOTE_DETAILS_RAW_DATA" StartingCell="B1" />
+              <ui:ExcelReadRange AddHeaders="False" DataTable="[outputDataTable2]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" SheetName="QUOTE_DETAILS_RAW_DATA">
+                <ui:ExcelReadRange.Range>
+                  <InArgument x:TypeArguments="x:String">
+                    <Literal x:TypeArguments="x:String" Value="" />
+                  </InArgument>
+                </ui:ExcelReadRange.Range>
+              </ui:ExcelReadRange>
+              <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[countExcel]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[outputQuoteDataTable.Rows.COUNT-1]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Quote sheet row is &quot; + countExcel.ToString]" TopMost="True" />
+            </Sequence>
+            <Assign sap:VirtualizedContainerService.HintSize="336,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[intCountExcel]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[outputQuoteDataTable2.Rows.COUNT + countExcel]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ExcelReadRange AddHeaders="False" DataTable="[varDataTable]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="336,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_5" SheetName="[strExcelProdDetSheet]">
+              <ui:ExcelReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ExcelReadRange.Range>
+            </ui:ExcelReadRange>
+            <ui:MessageBox ChosenButton="{x:Null}" Buttons="Ok" Caption="There are x number of row" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="336,59" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;This is the start row for the new sheet &quot; + varDataTable.Rows.COUNT.ToString]" TopMost="True" />
+            <ui:MessageBox ChosenButton="{x:Null}" Buttons="Ok" Caption="There are x number of row" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="336,59" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Fille up to this row &quot; + FillRangeLastRow.ToString]" TopMost="True" />
+            <ui:ExcelWriteCell Cell="[&quot;A&quot;+countExcel.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="336,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_13" SheetName="PRODUCED DETAILS" Text="=QUOTE_DETAILS_RAW_DATA!A2" />
+            <ui:ExcelWriteCell Cell="[&quot;B&quot;+countExcel.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="336,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_14" SheetName="PRODUCED DETAILS" Text="=QUOTE_DETAILS_RAW_DATA!B2" />
+            <ui:ExcelWriteCell Cell="[&quot;C&quot;+countExcel.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="336,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_15" SheetName="PRODUCED DETAILS" Text="[&quot;=TEXT(QUOTE_DETAILS_RAW_DATA!C2,&quot;&quot;######&quot;&quot;)&quot;]" />
+            <ui:ExcelWriteCell Cell="[&quot;D&quot;+countExcel.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="336,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_16" SheetName="PRODUCED DETAILS" Text="[&quot;=TEXT(QUOTE_DETAILS_RAW_DATA!D2,&quot;&quot;D-MMM&quot;&quot;)&quot;]" />
+            <ui:ExcelWriteCell Cell="[&quot;E&quot;+countExcel.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="336,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_17" SheetName="PRODUCED DETAILS" Text="=QUOTE_DETAILS_RAW_DATA!E2" />
+            <ui:ExcelWriteCell Cell="[&quot;F&quot;+countExcel.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="336,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_18" SheetName="PRODUCED DETAILS" Text="[&quot;=TEXT(QUOTE_DETAILS_RAW_DATA!F2,&quot;&quot;$#,##0.00&quot;&quot;)&quot;]" />
+            <ui:ExcelSelectRange DisplayName="Select Range" sap:VirtualizedContainerService.HintSize="336,59" sap2010:WorkflowViewState.IdRef="ExcelSelectRange_3" Range="[strProducedQuoteFillRange]" SheetName="PRODUCED DETAILS" />
+            <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="336,116" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="d" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="False">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+  </Sequence>
+</Activity>

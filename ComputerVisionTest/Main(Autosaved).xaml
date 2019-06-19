@@ -1,0 +1,253 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="742,1102" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="15">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="702,982" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="getText" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p:CVScope ApiKey="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope 'client server'" sap:VirtualizedContainerService.HintSize="680,759.333333333333" sap2010:WorkflowViewState.IdRef="CVScope_4" Server="[Nothing]">
+      <p:CVScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(707, 288, 759, 300)]" DesignTarget="[Rectangle.FromLTRB(696, 307, 744, 317)]" DisplayName="CV Type Into relative to Find CV Text - 'Category'" sap:VirtualizedContainerService.HintSize="666,220.666666666667" sap2010:WorkflowViewState.IdRef="AnchorContextAware_9">
+              <ui:AnchorContextAware.AnchorProvider>
+                <ActivityAction x:TypeArguments="ui:Anchor2Data">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
+                  </ActivityAction.Argument>
+                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="707, 288, 52, 12" DisplayName="Find CV Text - 'Category'" FuzzySearch="True" sap:VirtualizedContainerService.HintSize="314,128.666666666667" sap2010:WorkflowViewState.IdRef="FindCVText_7" InformativeScreenshot="a99f36c452177f9475fef949e7131446" TargetType="Text" Text="Category" TimeoutMS="30000" />
+                </ActivityAction>
+              </ui:AnchorContextAware.AnchorProvider>
+              <ui:AnchorContextAware.TargetProvider>
+                <ActivityAction x:TypeArguments="ui:Anchor2Data">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
+                  </ActivityAction.Argument>
+                  <p:CVTypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" Image="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" Activate="True" ClickBeforeTyping="True" DesignTimeRectangle="696, 307, 48, 10" DisplayName="CV Type Into - Text" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,134" sap2010:WorkflowViewState.IdRef="CVTypeInto_4" InformativeScreenshot="d0a4340cf9228cfc704284b200236f40" SendWindowMessages="False" SimulateType="False" TargetType="Text" Text="Business" TimeoutMS="30000">
+                    <p:CVTypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                    </p:CVTypeInto.Target>
+                  </p:CVTypeInto>
+                </ActivityAction>
+              </ui:AnchorContextAware.TargetProvider>
+            </ui:AnchorContextAware>
+            <ui:AnchorContextAware DesignAnchor="[Rectangle.FromLTRB(707, 288, 759, 300)]" DesignTarget="[Rectangle.FromLTRB(696, 307, 744, 317)]" DisplayName="CV Get Text relative to Find CV Text - 'Category'" sap:VirtualizedContainerService.HintSize="666,220.666666666667" sap2010:WorkflowViewState.IdRef="AnchorContextAware_10">
+              <ui:AnchorContextAware.AnchorProvider>
+                <ActivityAction x:TypeArguments="ui:Anchor2Data">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
+                  </ActivityAction.Argument>
+                  <p:FindCVText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" Occurrence="{x:Null}" OutRegion="{x:Null}" Result="{x:Null}" Target="{x:Null}" DesignTimeRectangle="707, 288, 52, 12" DisplayName="Find CV Text - 'Category'" FuzzySearch="True" sap:VirtualizedContainerService.HintSize="314,128.666666666667" sap2010:WorkflowViewState.IdRef="FindCVText_8" InformativeScreenshot="a99f36c452177f9475fef949e7131446" TargetType="Text" Text="Category" TimeoutMS="30000" />
+                </ActivityAction>
+              </ui:AnchorContextAware.AnchorProvider>
+              <ui:AnchorContextAware.TargetProvider>
+                <ActivityAction x:TypeArguments="ui:Anchor2Data">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:Anchor2Data" Name="ContextAnchor2Data" />
+                  </ActivityAction.Argument>
+                  <p:CVGetText Area="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DesignTimeScaleFactor="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" Target="{x:Null}" DesignTimeRectangle="696, 307, 48, 10" DisplayName="CV Get Text - Text" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="CVGetText_4" InformativeScreenshot="d0a4340cf9228cfc704284b200236f40" Result="[getText]" TargetType="Text" TimeoutMS="30000" UseClipboard="None" />
+                </ActivityAction>
+              </ui:AnchorContextAware.TargetProvider>
+            </ui:AnchorContextAware>
+          </Sequence>
+        </ActivityAction>
+      </p:CVScope.Body>
+      <p:CVScope.DesignTimeCache>
+        <uc:CVCache ScreenshotGuid="{x:Null}" ServerVersion="{x:Null}" InformativeScreenshot="ba737e77c6572450e6a2ffd65112825b" LogicalPosition="12, 90" OcrText="Contact Mangement Database&#xD;&#xA;Home&#xD;&#xA;View Create External Data Database Tools Help p Tell me what you want to do&#xD;&#xA;Refre;h New Totals&#xD;&#xA;Records&#xD;&#xA;Create Mailing Labels Show/Hide fields&#xD;&#xA;E-mail Address Text Formatting&#xD;&#xA;Business Paul Ions smRT&#xD;&#xA;New Saue&#xD;&#xA;Activities&#xD;&#xA;Favorites dECUTE&#xD;&#xA;Advanced • Saue as&#xD;&#xA;Clipboard&#xD;&#xA;All Access Obje.&#xD;&#xA;Search...&#xD;&#xA;Tables&#xD;&#xA;Contacts&#xD;&#xA;Settings&#xD;&#xA;Queries&#xD;&#xA;Contacts Mended&#xD;&#xA;Forms&#xD;&#xA;Contact Details&#xD;&#xA;Contact List&#xD;&#xA;V.'elcome&#xD;&#xA;Reports&#xD;&#xA;Directory&#xD;&#xA;Phone 800k&#xD;&#xA;Macros&#xD;&#xA;Auto Exec&#xD;&#xA;Search&#xD;&#xA;Modules&#xD;&#xA;modMapping Sort &amp; Filter&#xD;&#xA;Contact List&#xD;&#xA;New Contact&#xD;&#xA;First Name Add From Outlook&#xD;&#xA;Last Name Company Job Title Category&#xD;&#xA;Personal Phone Home Phone Mobile Phon Zip/Postal Cc Assign&#xD;&#xA;Flow Decision&#xD;&#xA;Flowchart&#xD;&#xA;Log Message&#xD;&#xA;Message Box&#xD;&#xA;Sequence&#xD;&#xA;Try Catch&#xD;&#xA;Write Line&#xD;&#xA;Recent&#xD;&#xA;Available&#xD;&#xA;App Integration&#xD;&#xA;Orchestrator&#xD;&#xA;Programming&#xD;&#xA;System&#xD;&#xA;LIL Automation&#xD;&#xA;user Events&#xD;&#xA;Workflow" Position="8, 60" ScaleFactor="1">
+          <uc:CVCache.CvUiElements>
+            <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="0" />
+          </uc:CVCache.CvUiElements>
+          <uc:CVCache.OcrTexts>
+            <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="128">
+              <uc:OcrTextInfo Region="756, 11, 42, 9" Text="Contact" />
+              <uc:OcrTextInfo Region="802, 11, 70, 12" Text="Mangement" />
+              <uc:OcrTextInfo Region="876, 11, 47, 9" Text="Database" />
+              <uc:OcrTextInfo Region="69, 45, 36, 9" Text="Home" />
+              <uc:OcrTextInfo Region="16, 108, 25, 9" Text="View" />
+              <uc:OcrTextInfo Region="133, 45, 36, 9" Text="Create" />
+              <uc:OcrTextInfo Region="201, 44, 44, 10" Text="External" />
+              <uc:OcrTextInfo Region="251, 45, 25, 9" Text="Data" />
+              <uc:OcrTextInfo Region="307, 44, 53, 10" Text="Database" />
+              <uc:OcrTextInfo Region="365, 44, 30, 10" Text="Tools" />
+              <uc:OcrTextInfo Region="425, 44, 25, 13" Text="Help" />
+              <uc:OcrTextInfo Region="481, 43, 14, 14" Text="p" />
+              <uc:OcrTextInfo Region="507, 44, 19, 10" Text="Tell" />
+              <uc:OcrTextInfo Region="532, 47, 16, 7" Text="me" />
+              <uc:OcrTextInfo Region="553, 44, 27, 10" Text="what" />
+              <uc:OcrTextInfo Region="584, 47, 20, 10" Text="you" />
+              <uc:OcrTextInfo Region="609, 45, 27, 9" Text="want" />
+              <uc:OcrTextInfo Region="640, 45, 11, 9" Text="to" />
+              <uc:OcrTextInfo Region="657, 44, 14, 10" Text="do" />
+              <uc:OcrTextInfo Region="482, 108, 37, 9" Text="Refre;h" />
+              <uc:OcrTextInfo Region="546, 75, 23, 9" Text="New" />
+              <uc:OcrTextInfo Region="620, 75, 31, 9" Text="Totals" />
+              <uc:OcrTextInfo Region="554, 148, 39, 8" Text="Records" />
+              <uc:OcrTextInfo Region="588, 261, 36, 9" Text="Create" />
+              <uc:OcrTextInfo Region="630, 260, 41, 13" Text="Mailing" />
+              <uc:OcrTextInfo Region="676, 260, 37, 12" Text="Labels" />
+              <uc:OcrTextInfo Region="773, 260, 61, 12" Text="Show/Hide" />
+              <uc:OcrTextInfo Region="839, 260, 33, 12" Text="fields" />
+              <uc:OcrTextInfo Region="836, 287, 34, 10" Text="E-mail" />
+              <uc:OcrTextInfo Region="875, 287, 47, 10" Text="Address" />
+              <uc:OcrTextInfo Region="933, 148, 19, 8" Text="Text" />
+              <uc:OcrTextInfo Region="956, 148, 55, 10" Text="Formatting" />
+              <uc:OcrTextInfo Region="1005, 287, 47, 10" Text="Business" />
+              <uc:OcrTextInfo Region="1478, 12, 22, 9" Text="Paul" />
+              <uc:OcrTextInfo Region="1503, 12, 29, 9" Text="Ions" />
+              <uc:OcrTextInfo Region="1701, 76, 29, 8" Text="smRT" />
+              <uc:OcrTextInfo Region="1694, 139, 22, 8" Text="New" />
+              <uc:OcrTextInfo Region="1734, 139, 21, 8" Text="Saue" />
+              <uc:OcrTextInfo Region="1692, 202, 48, 9" Text="Activities" />
+              <uc:OcrTextInfo Region="1714, 281, 46, 9" Text="Favorites" />
+              <uc:OcrTextInfo Region="1837, 76, 43, 8" Text="dECUTE" />
+              <uc:OcrTextInfo Region="391, 99, 52, 9" Text="Advanced" />
+              <uc:OcrTextInfo Region="447, 102, 5, 3" Text="•" />
+              <uc:OcrTextInfo Region="1774, 139, 21, 8" Text="Saue" />
+              <uc:OcrTextInfo Region="1800, 141, 9, 6" Text="as" />
+              <uc:OcrTextInfo Region="107, 148, 49, 10" Text="Clipboard" />
+              <uc:OcrTextInfo Region="9, 170, 21, 16" Text="All" />
+              <uc:OcrTextInfo Region="39, 171, 61, 15" Text="Access" />
+              <uc:OcrTextInfo Region="108, 170, 46, 21" Text="Obje." />
+              <uc:OcrTextInfo Region="9, 200, 55, 10" Text="Search..." />
+              <uc:OcrTextInfo Region="12, 220, 40, 9" Text="Tables" />
+              <uc:OcrTextInfo Region="43, 242, 43, 8" Text="Contacts" />
+              <uc:OcrTextInfo Region="43, 266, 40, 10" Text="Settings" />
+              <uc:OcrTextInfo Region="13, 286, 46, 10" Text="Queries" />
+              <uc:OcrTextInfo Region="43, 308, 43, 8" Text="Contacts" />
+              <uc:OcrTextInfo Region="91, 308, 46, 8" Text="Mended" />
+              <uc:OcrTextInfo Region="13, 328, 37, 9" Text="Forms" />
+              <uc:OcrTextInfo Region="43, 350, 39, 8" Text="Contact" />
+              <uc:OcrTextInfo Region="86, 350, 33, 8" Text="Details" />
+              <uc:OcrTextInfo Region="43, 374, 39, 8" Text="Contact" />
+              <uc:OcrTextInfo Region="86, 374, 16, 8" Text="List" />
+              <uc:OcrTextInfo Region="42, 398, 46, 8" Text="V.'elcome" />
+              <uc:OcrTextInfo Region="13, 418, 46, 12" Text="Reports" />
+              <uc:OcrTextInfo Region="43, 440, 45, 10" Text="Directory" />
+              <uc:OcrTextInfo Region="43, 464, 31, 8" Text="Phone" />
+              <uc:OcrTextInfo Region="79, 464, 26, 8" Text="800k" />
+              <uc:OcrTextInfo Region="13, 484, 44, 9" Text="Macros" />
+              <uc:OcrTextInfo Region="42, 506, 24, 8" Text="Auto" />
+              <uc:OcrTextInfo Region="68, 506, 21, 8" Text="Exec" />
+              <uc:OcrTextInfo Region="43, 530, 32, 8" Text="Search" />
+              <uc:OcrTextInfo Region="13, 550, 52, 9" Text="Modules" />
+              <uc:OcrTextInfo Region="43, 572, 68, 10" Text="modMapping" />
+              <uc:OcrTextInfo Region="316, 148, 20, 8" Text="Sort" />
+              <uc:OcrTextInfo Region="340, 148, 8, 8" Text="&amp;" />
+              <uc:OcrTextInfo Region="352, 148, 25, 8" Text="Filter" />
+              <uc:OcrTextInfo Region="247, 202, 104, 23" Text="Contact" />
+              <uc:OcrTextInfo Region="363, 202, 42, 23" Text="List" />
+              <uc:OcrTextInfo Region="284, 261, 25, 9" Text="New" />
+              <uc:OcrTextInfo Region="314, 261, 43, 9" Text="Contact" />
+              <uc:OcrTextInfo Region="311, 287, 23, 10" Text="First" />
+              <uc:OcrTextInfo Region="339, 288, 33, 9" Text="Name" />
+              <uc:OcrTextInfo Region="417, 260, 23, 10" Text="Add" />
+              <uc:OcrTextInfo Region="446, 261, 28, 9" Text="From" />
+              <uc:OcrTextInfo Region="479, 260, 46, 12" Text="Outlook" />
+              <uc:OcrTextInfo Region="413, 288, 22, 9" Text="Last" />
+              <uc:OcrTextInfo Region="440, 288, 33, 9" Text="Name" />
+              <uc:OcrTextInfo Region="517, 288, 54, 12" Text="Company" />
+              <uc:OcrTextInfo Region="613, 287, 20, 10" Text="Job" />
+              <uc:OcrTextInfo Region="638, 287, 23, 10" Text="Title" />
+              <uc:OcrTextInfo Region="707, 288, 52, 12" Text="Category" />
+              <uc:OcrTextInfo Region="696, 307, 48, 10" Text="Personal" />
+              <uc:OcrTextInfo Region="1058, 287, 34, 10" Text="Phone" />
+              <uc:OcrTextInfo Region="1131, 288, 33, 9" Text="Home" />
+              <uc:OcrTextInfo Region="1170, 287, 34, 10" Text="Phone" />
+              <uc:OcrTextInfo Region="1227, 287, 39, 10" Text="Mobile" />
+              <uc:OcrTextInfo Region="1272, 287, 27, 10" Text="Phon" />
+              <uc:OcrTextInfo Region="1318, 287, 61, 13" Text="Zip/Postal" />
+              <uc:OcrTextInfo Region="1385, 288, 12, 9" Text="Cc" />
+              <uc:OcrTextInfo Region="1754, 307, 34, 12" Text="Assign" />
+              <uc:OcrTextInfo Region="1755, 333, 23, 9" Text="Flow" />
+              <uc:OcrTextInfo Region="1783, 333, 43, 9" Text="Decision" />
+              <uc:OcrTextInfo Region="1755, 359, 50, 9" Text="Flowchart" />
+              <uc:OcrTextInfo Region="1755, 385, 18, 12" Text="Log" />
+              <uc:OcrTextInfo Region="1778, 385, 45, 12" Text="Message" />
+              <uc:OcrTextInfo Region="1755, 411, 45, 12" Text="Message" />
+              <uc:OcrTextInfo Region="1805, 411, 18, 9" Text="Box" />
+              <uc:OcrTextInfo Region="1755, 437, 50, 12" Text="Sequence" />
+              <uc:OcrTextInfo Region="1754, 463, 15, 12" Text="Try" />
+              <uc:OcrTextInfo Region="1773, 463, 29, 9" Text="Catch" />
+              <uc:OcrTextInfo Region="1754, 489, 28, 9" Text="Write" />
+              <uc:OcrTextInfo Region="1787, 489, 20, 9" Text="Line" />
+              <uc:OcrTextInfo Region="1714, 515, 35, 9" Text="Recent" />
+              <uc:OcrTextInfo Region="1713, 541, 47, 9" Text="Available" />
+              <uc:OcrTextInfo Region="1732, 567, 21, 12" Text="App" />
+              <uc:OcrTextInfo Region="1758, 567, 57, 12" Text="Integration" />
+              <uc:OcrTextInfo Region="1733, 593, 66, 9" Text="Orchestrator" />
+              <uc:OcrTextInfo Region="1733, 619, 71, 12" Text="Programming" />
+              <uc:OcrTextInfo Region="1733, 645, 36, 12" Text="System" />
+              <uc:OcrTextInfo Region="1733, 671, 10, 9" Text="LIL" />
+              <uc:OcrTextInfo Region="1747, 671, 62, 9" Text="Automation" />
+              <uc:OcrTextInfo Region="1733, 697, 23, 9" Text="user" />
+              <uc:OcrTextInfo Region="1760, 697, 33, 9" Text="Events" />
+              <uc:OcrTextInfo Region="1732, 723, 50, 9" Text="Workflow" />
+            </scg:List>
+          </uc:CVCache.OcrTexts>
+        </uc:CVCache>
+      </p:CVScope.DesignTimeCache>
+      <p:CVScope.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <ui:MicrosoftOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
+        </ActivityFunc>
+      </p:CVScope.OCREngine>
+      <p:CVScope.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="867d495fc6eb26b76d4e025191939c65" Selector="&lt;wnd app='tvnviewer.exe' cls='TvnWindowClass' title='server - TightVNC Viewer' /&gt;&lt;wnd aaname='Horizontal' cls='TvnWindowClass' title='server - TightVNC Viewer' /&gt;&lt;ctrl name='server - TightVNC Viewer' role='client' /&gt;" WaitForReady="INTERACTIVE" />
+      </p:CVScope.Target>
+    </p:CVScope>
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="680,58.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;this was captured from a remote server, text is &quot; + getText]" TopMost="True" />
+  </Sequence>
+</Activity>
